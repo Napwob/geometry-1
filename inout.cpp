@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-main()
+int main()
 {
     int m, n, r;
     printf("input parametrs(m,n,r)(cherez probel)");
