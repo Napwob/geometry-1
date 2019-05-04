@@ -1,2 +1,2 @@
-result: inout.cpp
+all: inout.cpp
 	gcc -g -Wall -o result inout.cpp
