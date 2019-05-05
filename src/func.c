@@ -1,13 +1,15 @@
+#include "func.h"
 #include <stdio.h>
 #include <stdlib.h>
-void inputOkr()
+void outOkr()
 {
-    double p, s int m, n, r;
+    double p, s;
+    int m, n, r;
     printf("input parametrs(m,n,r)(cherez probel)");
     scanf("%d %d %d", &m, &n, &r);
-    printf("circle( %d , %d , %d )", m, n, r);
     p = POkr(r);
     s = SOkr(r);
+    printf("circle( %d , %d , %d ):P=%6.2f,S=%6.2f", m, n, r, p, s);
 }
 double POkr(int r)
 {
