@@ -8,7 +8,7 @@ int main()
     int flag = 0;
     float per, plos;
     int m, n, r, xt1, yt1, xt2, yt2, xt3, yt3, px1, py1, px2, py2, px3, py3,
-            px4, py4;
+            px4, py4, x1, y1, r1, x2, y2, r2;
     printf("input flag");
     while (flag != 4) {
         while (1) {
@@ -53,7 +53,10 @@ int main()
             plos = polygonS(px1, py1, px2, py2, px3, py3, px4, py4);
         }
         if (flag == 5) {
-            outPeres();
+            printf("(Peresechenie) input parametrs(m,n,r)(cherez probel): ");
+            scanf("%d %d %d", &x1, &y1, &r1);
+            scanf("%d %d %d", &x2, &y2, &r2);
+            peres(x1, y1, r1, x2, y2, r2);
         }
     }
     return 0;

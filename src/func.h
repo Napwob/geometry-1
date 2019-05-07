@@ -8,6 +8,5 @@ float polygonS(
         int px1, int py1, int px2, int py2, int px3, int py3, int px4, int py4);
 float polygonP(
         int px1, int py1, int px2, int py2, int px3, int py3, int px4, int py4);
-int outPeres();
 int peres(int x1, int y1, int r1, int x2, int y2, int r2);
 #endif

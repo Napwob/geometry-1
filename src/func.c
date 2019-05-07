@@ -56,14 +56,6 @@ float polygonP(
     printf("Perim=%.2f\n", perims);
     return perims;
 }
-int outPeres()
-{
-    int x1, x2, y1, y2, r1, r2;
-    printf("(Peresechenie) input parametrs(m,n,r)(cherez probel): ");
-    scanf("%d %d %d", &x1, &y1, &r1);
-    scanf("%d %d %d", &x2, &y2, &r2);
-    return peres(x1, y1, r1, x2, y2, r2);
-}
 int peres(int x1, int y1, int r1, int x2, int y2, int r2)
 {
     float ras;
