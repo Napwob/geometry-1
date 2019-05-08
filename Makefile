@@ -4,8 +4,12 @@ CFLAGS = -Wall -Werror
 SD = src/
 OD = build/
 EXECUTABLE = bin/result.exe
-all: $(EXECUTABLE)
-        
+
+all: build/ bin/ $(EXECUTABLE)
+build/:
+	mkdir build/ -p
+bin/:
+	mkdir bin/ -p        
 $(EXECUTABLE):	$(OD)main.o $(OD)func.o
 	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)func.o
 $(OD)main.o: $(SD)main.c
