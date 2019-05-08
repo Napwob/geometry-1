@@ -1,5 +1,5 @@
 .PHONY:all clean
-CC = gcc
+CC = g++
 CFLAGS = -Wall -Werror
 SD = src/
 OD = build/
