@@ -1,2 +1,3 @@
-build/*.o* src/.swp* bin/*.exe
-
+*.o
+*.swp
+bin/*.exe
