@@ -1,3 +1,2 @@
+build/*.o* src/.swp* bin/*.exe
 
-result
-*.swp
