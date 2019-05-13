@@ -8,20 +8,17 @@ T = test/
 EXECUTABLE = bin/result.exe
 TEST = bin/test.exe
 all: $(EXECUTABLE)
-        
-$(EXECUTABLE):	$(OD)main.o $(OD)func.o
-	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)func.o
+      
+all: build/ bin/ $(EXECUTABLE)
+build/:
+	mkdir build/ -p
+bin/:
+	mkdir bin/ -p        
+$(EXECUTABLE):  $(OD)main.o $(OD)func.o
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)func.o -lm
 $(OD)main.o: $(SD)main.c
-	$(CC) $(CFLAGS) -c -o $(OD)main.o $(SD)main.c
+	$(CC) $(CFLAGS) -c -o  $(OD)main.o $(SD)main.c -lm
 $(OD)func.o: $(SD)func.c
-	$(CC) $(CFLAGS) -c -o $(OD)func.o $(SD)func.c
-testing: $(TEST)
-
-$(TEST): $(ODT)tmain.o $(ODT)func.o
-	$(CC) $(CFLAGS) -o $(TEST) $(ODT)tmain.o $(ODT)func.o
-$(OD)tmain.o: $(T)tmain.c
-	$(CC) $(CFLAGS) -c -o $(ODT)tmain.o $(T)tmain.c
-$(OD)func.o: $(SD)func.c
-	$(CC) $(CFLAGS) -c -o $(ODT)func.o $(SD)func.c    
+	 $(CC) $(CFLAGS) -c -o  $(OD)func.o $(SD)func.c -lm
 clean:
 	rm -rf $(EXECUTABLE) $(OD)*.o $(TEST) $(ODT)*.o        
