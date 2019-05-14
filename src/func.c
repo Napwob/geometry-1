@@ -5,11 +5,19 @@
 #include <string.h>
 float POkr(int r)
 {
+    if (r <= 0) {
+        printf("Error");
+        return 0;
+    }
     float pi = 3.14;
     return 2 * pi * r;
 }
 float SOkr(int r)
 {
+    if (r <= 0) {
+        printf("Error");
+        return 0;
+    }
     float pi = 3.14;
     return pi * r * r;
 }
@@ -60,6 +68,34 @@ int peres(int x1, int y1, int r1, int x2, int y2, int r2)
 {
     float ras;
     ras = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+    if (x1 == x2 && y1 == y2) {
+        if (r1 == r2) {
+            printf("\n Peresekautsa!");
+            return 1;
+        } else {
+            printf("\n Net peresechenia!");
+            return 0;
+        }
+    }
+    if (r1 > r2 && ras <= r1) {
+        if (r2 >= r1 - ras) {
+            printf("\n Peresekautsa!");
+            return 1;
+        } else {
+            printf("\n Net peresechenia!");
+            return 0;
+        }
+    } else {
+        if (r2 > r1 && ras <= r2) {
+            if (r1 >= r2 - ras) {
+                printf("\n Peresekautsa!");
+                return 1;
+            } else {
+                printf("\n Net peresechenia!");
+                return 0;
+            }
+        }
+    }
     if (ras <= r1 + r2) {
         printf("\n Peresekautsa!");
         return 1;
