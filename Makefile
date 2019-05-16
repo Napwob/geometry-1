@@ -15,7 +15,7 @@ $(EXECUTABLE):  $(OD)main.o $(OD)func.o
 $(OD)main.o: $(SD)main.c
 	$(CC) $(CFLAGS) -c -o  $(OD)main.o $(SD)main.c -lm
 $(OD)func.o: $(SD)func.c
-	 $(CC) $(CFLAGS) -c -o  $(OD)func.o $(SD)func.c -lm
+	$(CC) $(CFLAGS) -c -o  $(OD)func.o $(SD)func.c -lm
 clean:
 	rm -rf $(EXECUTABLE) bin/geometry_test $(OD)*.o build/test/*.o
 test: build/test bin/geometry_test
