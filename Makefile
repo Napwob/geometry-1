@@ -11,7 +11,7 @@ build/:
 bin/:
 	mkdir bin/ -p        
 $(EXECUTABLE):  $(OD)main.o $(OD)func.o
-	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)func.o -lm
+	$(CC) $(CFLAGS) -o $(EXECUTABLE) $(OD)main.o $(OD)func.o
 $(OD)main.o: $(SD)main.c
 	$(CC) $(CFLAGS) -c -o  $(OD)main.o $(SD)main.c -lm
 $(OD)func.o: $(SD)func.c
